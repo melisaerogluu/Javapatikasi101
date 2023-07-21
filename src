@@ -35,3 +35,15 @@ public class main {
         System.out.print(sonuc < 60 ? "KALDINIZ :(" : "TEBRİKLER GEÇTİN :)");
 
 
+    }
+}
+
+
+
+
+
+
+
+
+
+
