@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class main7 {
+    public static void main(String[] args) {
+       // sonuna yazılmıs k harfi kilo f harfi fiyat demek.
+
+        double armutf,armutk,elmaf,elmak,domatesf,domatesk,muzf,muzk,patlicank,patlicanf,toplam;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Armut kaç kilo ? : ");
+        armutk = input.nextDouble();
+        armutf= armutk * 2.14 ;
+
+
+        System.out.print("Elma kaç kilo ? : ");
+        elmak = input.nextDouble();
+        elmaf= elmak * 3.67 ;
+
+
+        System.out.print("Domates kaç kilo ? : ");
+        domatesk = input.nextDouble();
+        domatesf= domatesk * 1.11 ;
+
+        System.out.print("Muz kaç kilo ? : ");
+        muzk = input.nextDouble();
+        muzf= muzk * 0.95 ;
+
+
+        System.out.print("Patlıcan kaç kilo ? : ");
+        patlicank = input.nextDouble();
+        patlicanf= patlicank * 5.00 ;
+
+
+        toplam = (elmaf + armutf + domatesf + muzf + patlicanf);
+        System.out.print("Toplam Tutar : "+toplam + "TL");
+
+
+
+
+
+
+
+    }
+}
