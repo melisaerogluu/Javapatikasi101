@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class main5 {
+    public static void main(String[] args) {
+      double r, alan, cevre ,pi, aci ;
+
+      Scanner input = new Scanner(System.in);
+        System.out.print("Dairenin yarıçapını giriniz : ");
+        r = input.nextDouble();
+
+        System.out.print("Merkez açının ölçüsünü giriniz : ");
+        aci = input.nextDouble();
+
+        pi = 3.14 ;
+       alan = (pi*(r*r)*aci) / 360;
+       cevre = 2*pi*r;
+        System.out.println("Dairenin Alanı : " +alan);
+        System.out.print("Dairenin çevresi : "+cevre);
+
