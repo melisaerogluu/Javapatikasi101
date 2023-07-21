@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class main4 {
+    public static void main(String[] args) {
+
+        double totaltutar,gidilenkm;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Km : ");
+        gidilenkm= input.nextDouble();
+
+
+
+        totaltutar = 10+ gidilenkm*2.20;
+
+
+        System.out.print("ücret : ");
+        System.out.println(totaltutar < 20 ? 20 : totaltutar);
