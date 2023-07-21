@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class main3 {
+    public static void main(String[] args) {
+        double a,b,c;
+        Scanner input = new Scanner(System.in);
+        System.out.print("a kenarının uzunluğunu giriniz : ");
+        a = input.nextDouble();
+
+        System.out.print(" b kenarının uzunluğunu giriniz : ");
+        b = input.nextDouble();
+
+        c =  Math.sqrt(a*a + b*b);
+        System.out.println("Hipotenüs uzunluğunuz:" +c);
+
+
+
+
+        double u,ucgencevresi,alankare,alan;
+        u=(a+b+c)/2;
+        alan = (a*b)/2;
+        ucgencevresi = 2*u;
+        alankare = u*(u-a)*(u-b)*(u-c);
+        System.out.println("Üçgenin çevresi : " + ucgencevresi);
+        System.out.println("Üçgenin alanı : " + alan);
+        System.out.println("Üçgenin alan*alanı : " +alankare);
