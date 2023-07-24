@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class main3 {
+    public static void main(String[] args) {
+    int mat,fiz,kim,turk,muzık;
+
+    Scanner inp=new Scanner(System.in);
+
+        System.out.print("Matematik notunuzu giriniz : ");
+        mat= inp.nextInt();
+        if(mat>=0 && mat<=100)   {
+        }else {
+            System.out.println("Girilen değer 0 ile 100 arasında değil!");
+        }
+
+
+
+
+        System.out.print("Fizik notunuzu giriniz : ");
+        fiz= inp.nextInt();
+        if (fiz>=0 && fiz<=100)  {
+        }else {
+            System.out.println("Girilen değer 0 ile 100 arasında değil!");
+        }
+
+
+
+
+        System.out.print("Kimya notunuzu giriniz : ");
+        kim= inp.nextInt();
+        if(kim>=0 && kim<=100) {
+        }else {
+            System.out.println("Girilen değer 0 ile 100 arasında değil!");
+        }
+
+        System.out.print("Türkçe notunuzu giriniz : ");
+        turk= inp.nextInt();
+        if (turk>=0 && turk<=100) {
+        }else {
+            System.out.println("Girilen değer 0 ile 100 arasında değil!");
+        }
+
+        System.out.print("Müzik notunuzu giriniz : ");
+        muzık= inp.nextInt();
+        if(muzık>=0 && muzık<=100) {
+        }else {
+            System.out.println("Girilen değer 0 ile 100 arasında değil!");
+        }
+
+
+
+
+
+
+        double ortalama = (mat+fiz+kim+muzık+turk)/5 ;
+        if (ortalama>=55&& ortalama<100){
+            System.out.print("Tebrikler geçtiniz :) Ortalamanız : "+ortalama);
+        }if (ortalama<55){
+            System.out.print("Üzgünüm,kaldınız :( Ortalamanız : "+ortalama);
+        }if (ortalama>100){
+            System.out.println("Girdiğiniz ders notu değerleri 0 ile 100 arasında olmalı!");
+        }
+
+
+
+
+
+    }
+}
