@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class havadurumu {
+    public static void main(String[] args) {
+Scanner input=new Scanner(System.in);
+double derece;
+        System.out.print("Hava kaç derece şekerim?");
+derece = input.nextDouble();
+
+if(derece<5){
+    System.out.print("Kayak yapabilirsiniz.");
+
+}
+else if (5<=derece&&derece<10){
+    System.out.print("Sinemaya gidebilirsiniz.");
+} else if (derece>=10 && derece<=15) {
+    System.out.print("Sinemaya gidebilirsiniz.\nPikniğe gidebilirsiniz.");
+
+} else if (derece>15&&derece<25) {
+    System.out.print("Pikniğe gidebilirsiniz");
+
+
+}else if(derece>25){
+    System.out.print("Yüzmeye gidebilirsiniz.");
+}
