@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class ucakbileti {
+    public static void main(String[] args) {
+
+        int km, yas, tip;
+        double tutar;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Km cinsinden mesafeyi giriniz : ");
+        km = input.nextInt();
+        System.out.print("Lütfen yaşınızı giriniz : ");
+        yas = input.nextInt();
+        System.out.print("Yolculuk tipini seçiniz( 1-Tek Yön   2- Gidiş Dönüş) : ");
+        tip = input.nextInt();
+
+        if ((km > 0) && (yas > 0) && (tip == 1 || tip == 2)) {
+            tutar = km * 0.1;
+
+            if (yas < 13) {
+                tutar *= 0.5;
+
+            } else if (yas > 12 && yas < 24) {
+                tutar *= 0.90;
+
+            } else if (yas > 65) {
+                tutar *= 0.70;
+            }
+            if (tip == 2) {
+                tutar *=0.8;
+                tutar*=2;
+            }
+            System.out.println("Toplam Tutar : " +tutar+"TL");
+
+        } else {
+            System.out.println("Hatalı veri girişi!");
+        }
+
+
+    }
+}
