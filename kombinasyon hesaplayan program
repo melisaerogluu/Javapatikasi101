@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class kombinasyon {
+    public static void main(String[] args) {
+        int n,r,fn =1,fr=1,fnr=1,Ctotal=1;
+        Scanner input= new Scanner(System.in);
+        System.out.print("n değerini giriniz : ");
+        n=input.nextInt();
+        System.out.print("r değerini giriniz : ");
+        r=input.nextInt();
+        for (int i =1; i<=n;i++){
+            fn=fn*i;
+
+        }for (int i=1;i<=r;i++){
+            fr=fr*i;
+
+        }
+        for (int i=1;i<=(n-r);i++){
+            fnr=fnr*i;
+
+        } Ctotal=fn/(fr*fnr);
+
+        System.out.println("Sonuç :" + Ctotal);
+
+
+
+
+
+    }
+}
