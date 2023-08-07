@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class atm {
+    public static void main(String[] args) {
+        String userName, pass;
+        Scanner inp = new Scanner(System.in);
+        int right = 3;
+        int balance = 1500;
+        int select;
+
+
+        while (right > 0) {
+            System.out.print("Kullanıcı Adınız : ");
+            userName = inp.nextLine();
+            System.out.print("Parolanız : ");
+            pass = inp.nextLine();
+            if (userName.equals("patika") && (pass.equals("dev123"))) {
+                System.out.println("Merhaba, X Bankasına Hoşgeldiniz!");
+                System.out.println("Lütfen yapmak istediğiniz işlemi seçin");
+                System.out.println("1-Para Yatırma \n2-Para Çekme\n3-Bakiye Sorgulama\n4-Çıkış yap");
+                select = inp.nextInt();
+                switch (select) {
+                    case 1:
+                        System.out.print("Yatırmak istediğiniz para miktarı :");
+                        int price = inp.nextInt();
+                        balance += price;
+                        System.out.print("Güncel bakiyeniz :" + balance);
+                        break;
+                    case 2:
+                        System.out.print("Çekmek istediğiniz para miktarı : ");
+
+                        int cekim = inp.nextInt();
+                        if (cekim > balance) {
+                            System.out.println("Bakiye Yetersiz!");
+                        } else {
+                            balance -= cekim;
+                            System.out.println("Kalan bakiyeniz : " + balance);
+                        }
+                        break;
+                    case 3:
+                        System.out.println("Bakiyeniz:" + balance);
+                        break;
+                    case 4:
+                        System.out.println("Kartınızı alabilirsiniz.İyi Günler Dileriz.");
+                        break;
+                    default:
+                        System.out.println("Hatalı tuşlama yaptınız.Tekrar deneyiniz");
+                        break;
+                }
+
+            } else {
+                right--;
+                System.out.println("Hatalı Giriş.Tekrar Deneyin!");
+                if (right == 0) {
+                    System.out.println("ÜSt üste çok fazla hatalı giriş saptandı.Hesap bloke edildi! Banka ile iletişime geçin.");
+                } else
+                    System.out.println("Kalan Hakkınız : " + right);
+            }
+        }
+
+
+    }
+
+}
