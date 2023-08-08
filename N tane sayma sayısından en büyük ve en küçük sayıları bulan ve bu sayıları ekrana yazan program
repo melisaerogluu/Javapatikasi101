@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class minmax {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int n;
+        int sayi;
+        int kucuk = 0;
+        int buyuk = 0;
+        System.out.print("Kaç adet sayı gireceksiniz ? :");
+        n = inp.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i + ". sayıyı giriniz : ");
+            sayi = inp.nextInt();
+
+            if (sayi > buyuk) {
+                buyuk = sayi;
+            }
+            if (sayi < kucuk) {
+                kucuk = sayi;
+
+            }
+        }
+        System.out.println("Büyük sayı : " + buyuk);
+        System.out.println("Küçük sayı :" + kucuk);
+
+    }
+}
